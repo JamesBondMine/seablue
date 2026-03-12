@@ -45,7 +45,7 @@
    - **上架 App Store 要求**：需使用 **Xcode 16 及以上版本**，否则可能无法提交或通过审核。
 2. 安装完成后，打开 Xcode 一次，完成许可协议与额外组件安装(主要是安装模拟器)。
 3. 启动 Xcode 创建一个app进行测试：
-   ![xcide 创建示意](images/xcode1.png)
+   ![xcide 创建示意](images/xcde1.png)
    ![xcode 创建示意1](images/xcode2.png)
 4. 运行 Xcode 选择模拟器查看加载效果：
 ![xcide 运行示意](images/xcode3.png)
