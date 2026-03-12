@@ -125,6 +125,7 @@ flutter doctor
 注意区分芯片类型
 
 1、DevEco Studio
+![zshrc 结果示意](images/hongm.png)
 2、Command Line Tools
 3、ohpm-repo
 
@@ -151,31 +152,15 @@ flutter doctor -v
 
 ![鸿蒙 结果示意](images/fluttershm.png)
 
-创建支持鸿蒙的工程并构建 HAP：
+创建支持鸿蒙的工程：
 
 ```bash
 flutter create appbyflutter
-cd 项目名称
-flutter build hap --target-platform ohos-arm64 --debug
-# 或 release
-flutter build hap --target-platform ohos-arm64 --release
 ```
-
-创建支持鸿蒙的工程并构建 HAP：
-
-```bash
-flutter create appbyflutter
-cd 项目名称
-flutter build hap --target-platform ohos-arm64 --debug
-# 或 release
-flutter build hap --target-platform ohos-arm64 --release
-```
-
-本仓库（my_ohos_app）已包含 `ohos` 平台，在鸿蒙环境配置完成后，可在项目根目录执行 `flutter build hap` 进行鸿蒙端构建。
-
+![创建结果 结果示意](images/create.png)
 ---
 ## 六、Android 环境（可选）
-
+![zshrc 结果示意](images/androids.png)
 **本节说明**：仅在需要开发 Android 应用时配置；需 JDK 17 与 Android Studio。
 
 若需在 Mac 上同时开发 Android：
@@ -186,15 +171,7 @@ flutter build hap --target-platform ohos-arm64 --release
    - 若使用独立 JDK 或多版本共存，可指定 Flutter 使用的 JDK 路径：  
      `flutter config --jdk-dir=/path/to/jdk`
 2. 安装 [Android Studio](https://developer.android.com/studio)。
-3. 打开 Android Studio → **More Actions** → **SDK Manager**，安装：
-   - **Android SDK**
-   - **Android SDK Platform**
-   - **Android SDK Command-line Tools**
-4. 同意 Android 许可：
-   ```bash
-   flutter doctor --android-licenses
-   ```
-5. 再次运行 `flutter doctor` 确认 Android 项通过。
+3. 再次运行 `flutter doctor` 确认 Android 项通过。
 
 ---
 
@@ -203,17 +180,17 @@ flutter build hap --target-platform ohos-arm64 --release
 **本节说明**：选 VS Code 或 Android Studio 其一，安装 Flutter 插件即可编写、运行、调试。
 
 ### 7.1 VS Code（轻量推荐）
-
+![code 结果示意](images/vscode.png)
 1. 安装 [VS Code](https://code.visualstudio.com/)。
 2. 安装扩展：
    - **Flutter**（会连带安装 Dart 扩展）。
 3. 命令面板（`Cmd+Shift+P`）输入 `Flutter: New Project` 可创建新项目；底部状态栏可选择设备并运行/调试。
 
-### 7.2 Android Studio
+![codef 结果示意](images/codeflutter.png)
 
-1. 安装 [Android Studio](https://developer.android.com/studio)。
-2. **Preferences / Settings** → **Plugins** → 搜索并安装 **Flutter**（会提示安装 Dart 插件）。
-3. 重启后可通过 **New Flutter Project** 创建项目，并可使用内置模拟器与真机调试。
+### 7.2 Android Studio
+1. **Preferences / Settings** → **Plugins** → 搜索并安装 **Flutter**（会提示安装 Dart 插件）。
+2. 重启后可通过 **New Flutter Project** 创建项目，并可使用内置模拟器与真机调试。
 
 ---
 
