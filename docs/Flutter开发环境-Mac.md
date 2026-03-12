@@ -158,6 +158,14 @@ flutter doctor -v
 flutter create appbyflutter
 ```
 ![创建结果 结果示意](images/create.png)
+
+### 5.3 配置调试签名
+
+1、启动DevEco
+2、打开appbyflutter中的ohos项目
+3、请通过DevEco Studio打开ohos工程后配置调试签名(File -> Project Structure -> Signing Configs 勾选Automatically
+generate signature)
+
 ---
 ## 六、Android 环境（可选）
 ![zshrc 结果示意](images/androids.png)
@@ -229,12 +237,12 @@ flutter create appbyflutter
 **8.2**：android运行与打包
 1、flutter run
 2、flutter build apk
-
+![android打包 结果示意](images/apk.png)
 
 **8.3**：鸿蒙运行与打包
 1、flutter run
-2、flutter build apk
-
+2、flutter build hap(推荐通过鸿蒙开发者工具Build打包)
+![hap打包 结果示意](images/hap.png)
 ---
 
 ## 九、自检清单
