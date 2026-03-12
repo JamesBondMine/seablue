@@ -160,7 +160,7 @@ flutter create appbyflutter
 ![创建结果 结果示意](images/create.png)
 
 
-仅创建 iOS、Android、鸿蒙 的工程
+⚠️⚠️⚠️仅创建 iOS、Android、鸿蒙 的工程
 
 ```bash
 flutter create --platforms ios,android,ohos appbyflutter
