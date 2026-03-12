@@ -5,8 +5,15 @@
 **整体流程**（按顺序做，不容易乱）：
 
 ![搭建顺序示意](images/flutter-setup-flow.png)
+flowchart TD
+  A[1. 系统要求<br/>M1 / M2 / M3 / M4 或 Intel<br/>内存 ≥ 16GB，磁盘 ≥ 80GB] --> B[2. 安装 Xcode + CocoaPods]
+  B --> C[3. 安装 Flutter SDK（鸿蒙版）<br/>AtomGit：openharmony-tpc/flutter_flutter<br/>分支：oh-3.35.7-dev]
+  C --> D[4. 安装 Android Studio + Android SDK<br/>（用于 Android 打包）]
+  D --> E[5. 安装 HarmonyOS DevEco Studio<br/>+ HarmonyOS SDK（API 20）+ ohpm 等<br/>（用于鸿蒙打包）]
+  E --> F[6. 配置 PATH / 环境变量<br/>运行 flutter doctor 检查<br/>配置 IDE（VS Code / Android Studio）]
 
-*图 1：环境搭建顺序 — 系统要求 → Xcode → Flutter SDK → doctor 检查 → 按需装 Android/鸿蒙 → IDE*
+
+*图 1：环境搭建顺序 — 系统要求 → Xcode + CocoaPods → 安装 Flutter-OH（AtomGit oh-3.35.7-dev）→ 运行 flutter doctor → 安装 HarmonyOS DevEco Studio + SDK → 配置 IDE（VS Code / Android Studio）*
 
 ---
 
