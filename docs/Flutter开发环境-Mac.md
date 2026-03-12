@@ -58,6 +58,7 @@
    ```bash
    pod --version
    ```
+   ![pod 成功示意](images/podsuccess.png)
    若本机无 Ruby 或报错，可先通过 [Homebrew](https://brew.sh/) 安装 Ruby 再执行上述命令。首次在项目 `ios` 目录执行 `pod install` 时，CocoaPods 会下载索引，可能较慢。
 
 ---
