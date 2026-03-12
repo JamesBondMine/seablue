@@ -65,7 +65,7 @@
 
 ## 三、Flutter SDK（鸿蒙版）
 
-**本节说明**：安装官方 Flutter SDK 并加入 PATH，
+**本节说明**：安装鸿蒙 Flutter SDK 并加入 PATH，
 
 ![三端与 Flutter 对应关系](images/three-platforms.png)
 
@@ -117,7 +117,64 @@ flutter doctor
 
 ---
 
-## 五、Android 环境（可选）
+## 五、鸿蒙（OpenHarmony）环境
+
+**下载**： 鸿蒙 SDK 与工具链
+前往浏览器下载(https://developer.huawei.com/consumer/cn/deveco-studio/)
+
+注意区分芯片类型
+
+1、DevEco Studio
+2、Command Line Tools
+3、ohpm-repo
+
+下载完成这三项之后,flutter 找不到 HMOS/OpenHarmony SDK，需要你在 macOS 上把 SDK 路径告诉它（环境变量 HOS_SDK_HOME 或 flutter config --ohos-sdk）。
+
+### 6.1 设置path 编辑~/.zshrc
+
+
+#  ⚠️OpenHarmony/HarmonyOS toolchain (from ~/Documents/command-line-tools)
+export COMMAND_LINE_TOOLS_HOME="$HOME/Documents/command-line-tools"
+export HOS_SDK_HOME="$COMMAND_LINE_TOOLS_HOME/sdk"
+
+#  ⚠️ohpm / hvigor (optional but commonly needed)
+export PATH="$COMMAND_LINE_TOOLS_HOME/bin:$COMMAND_LINE_TOOLS_HOME/ohpm/bin:$COMMAND_LINE_TOOLS_HOME/hvigor/bin:$PATH"
+alias hvigor="$HOME/Documents/command-line-tools/bin/hvigorw"
+
+![zshrc 结果示意](images/zshrc.png)
+
+### 6.2 环境检查与构建
+
+```bash
+flutter doctor -v
+```
+
+![鸿蒙 结果示意](images/fluttershm.png)
+
+创建支持鸿蒙的工程并构建 HAP：
+
+```bash
+flutter create appbyflutter
+cd 项目名称
+flutter build hap --target-platform ohos-arm64 --debug
+# 或 release
+flutter build hap --target-platform ohos-arm64 --release
+```
+
+创建支持鸿蒙的工程并构建 HAP：
+
+```bash
+flutter create appbyflutter
+cd 项目名称
+flutter build hap --target-platform ohos-arm64 --debug
+# 或 release
+flutter build hap --target-platform ohos-arm64 --release
+```
+
+本仓库（my_ohos_app）已包含 `ohos` 平台，在鸿蒙环境配置完成后，可在项目根目录执行 `flutter build hap` 进行鸿蒙端构建。
+
+---
+## 六、Android 环境（可选）
 
 **本节说明**：仅在需要开发 Android 应用时配置；需 JDK 17 与 Android Studio。
 
@@ -138,85 +195,6 @@ flutter doctor
    flutter doctor --android-licenses
    ```
 5. 再次运行 `flutter doctor` 确认 Android 项通过。
-
----
-
-## 六、鸿蒙（OpenHarmony）环境
-
-**本节说明**：鸿蒙需使用 AtomGit 上的 Flutter 分支与 DevEco 工具链，与官方 Flutter 分开配置。
-
-若需开发运行在 **鸿蒙 / OpenHarmony** 上的 Flutter 应用，需使用适配鸿蒙的 Flutter SDK，并配置鸿蒙工具链。
-
-### 6.1 Flutter SDK（鸿蒙版）
-
-鸿蒙版 Flutter 与官方仓库不同，需从 **AtomGit** 拉取指定分支：
-
-- 仓库地址：[openharmony-tpc/flutter_flutter](https://atomgit.com/openharmony-tpc/flutter_flutter)  
-- 开发分支：**`oh-3.35.7-dev`**（与 OpenHarmony 3.35.7 对应，会持续更新）
-
-安装步骤：
-
-```bash
-cd ~
-git clone https://atomgit.com/openharmony-tpc/flutter_flutter.git
-cd flutter_flutter
-git checkout oh-3.35.7-dev
-```
-
-配置 PATH（路径按实际克隆位置修改，与「三、安装 Flutter SDK」二选一或分目录并存时切换）：
-
-```bash
-export PATH="$HOME/flutter_flutter/bin:$PATH"
-export PUB_HOSTED_URL=https://pub.flutter-io.cn
-export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
-```
-
-建议开发前执行 `git pull` 拉取该分支最新代码。
-
-### 6.2 鸿蒙 SDK 与工具链
-
-以下均为鸿蒙开发的**必要条件**，从 [华为 / 鸿蒙开发者官网](https://developer.huawei.com/consumer/cn/develop) 下载并安装：
-
-1. **DevEco Studio**（推荐 6.0.2 Release 或官网最新）
-2. **Command Line Tools**（推荐 6.0.2 Release 或与 DevEco 版本对应）  
-   DevEco Studio 与 Command Line Tools **二者均需安装**，不能二选一。
-3. **ohpm-repo**（如官网提供，例如 **ohpm-repo 5.4.4 Release**）  
-   Windows 与 **Mac 需求一致**：若在 Windows 上已安装该组件，Mac 端做鸿蒙/Flutter 构建时也建议安装，以与官方工具链保持一致。具体以华为/鸿蒙官网当前说明为准。
-4. 在 SDK 管理器中安装 **API 20**（或当前推荐 API 版本）。
-5. 本机需 **Java 17**（与鸿蒙构建工具兼容）。
-
-在 `~/.zshrc` 或 `~/.bash_profile` 中配置（路径按本机安装位置调整）：
-
-```bash
-# 以 DevEco Studio 为例，Mac 常见路径
-export TOOL_HOME=/Applications/DevEco-Studio.app/Contents
-export DEVECO_SDK_HOME=$TOOL_HOME/sdk
-export PATH=$TOOL_HOME/tools/ohpm/bin:$PATH
-export PATH=$TOOL_HOME/tools/hvigor/bin:$PATH
-export PATH=$TOOL_HOME/tools/node/bin:$PATH
-```
-
-保存后执行 `source ~/.zshrc`（或对应配置文件）。
-
-### 6.3 环境检查与构建
-
-```bash
-flutter doctor -v
-```
-
-确认输出中 Flutter 与 OpenHarmony 相关项为正常状态。
-
-创建支持鸿蒙的工程并构建 HAP：
-
-```bash
-flutter create --platforms ohos 项目名称
-cd 项目名称
-flutter build hap --target-platform ohos-arm64 --debug
-# 或 release
-flutter build hap --target-platform ohos-arm64 --release
-```
-
-本仓库（my_ohos_app）已包含 `ohos` 平台，在鸿蒙环境配置完成后，可在项目根目录执行 `flutter build hap` 进行鸿蒙端构建。
 
 ---
 
