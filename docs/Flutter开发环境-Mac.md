@@ -63,9 +63,9 @@
 
 ---
 
-## 三、Flutter SDK（官方版）
+## 三、Flutter SDK（鸿蒙版）
 
-**本节说明**：安装官方 Flutter SDK 并加入 PATH，用于开发 iOS/Android。若只做鸿蒙开发，请跳到 [六、鸿蒙（OpenHarmony）环境](#六鸿蒙openharmony环境)。
+**本节说明**：安装官方 Flutter SDK 并加入 PATH，
 
 ![三端与 Flutter 对应关系](images/three-platforms.png)
 
@@ -73,54 +73,21 @@
 
 > 若需**同时支持鸿蒙**，可使用 [六、鸿蒙（OpenHarmony）环境](#六鸿蒙openharmony环境) 中的 Flutter 仓库（AtomGit 分支 `oh-3.35.7-dev`），与本节二选一或分目录安装、按需切换 `PATH`。
 
-### 方式一：官方推荐（下载安装包）
-
-1. 打开 [Flutter 官网 - 安装](https://docs.flutter.dev/get-started/install/macos)，下载 **macOS** 的 Flutter SDK 压缩包。
-2. 解压到目标目录，例如：
-   ```bash
-   cd ~
-   unzip ~/Downloads/flutter_macos_*.zip
-   ```
-   建议路径：`~/development/flutter`（不要放在需要高权限的目录，也不要放在有空格/特殊字符的路径）。
-
-### 方式二：使用 Git
+### 方式一：使用 Git
 
 ```bash
 cd ~
-git clone https://github.com/flutter/flutter.git -b stable
+git clone https://gitcode.com/openharmony-tpc/flutter_flutter.git
 ```
 
 ### 配置环境变量 PATH
 
-**要做的事**：让终端能找到 `flutter` 命令 —— 在 shell 配置文件里加上 Flutter 的 `bin` 目录，再执行一次 `source` 使配置生效。
-
 ![PATH 配置示意](images/path-config.png)
 
-*图 3：编辑 `~/.zshrc`（或 `~/.bash_profile`），末尾加一行 `export PATH=...`，保存后在终端执行 `source ~/.zshrc`。*
-
-编辑的配置文件（按你使用的 shell 选一个）：
-
-- **Bash**：`~/.bash_profile` 或 `~/.bashrc`
-- **Zsh**（macOS 默认）：`~/.zshrc`
-
-在文件**末尾**添加（路径按你实际解压位置修改）：
-
 ```bash
-export PATH="$PATH:$HOME/development/flutter/bin"
-```
-
-或若用 Git 克隆在 `~/flutter`：
-
-```bash
-export PATH="$PATH:$HOME/flutter/bin"
-```
-
-保存后执行：
-
-```bash
-source ~/.zshrc   # 若用 zsh
-# 或
-source ~/.bash_profile   # 若用 bash
+echo 'export PATH="$HOME/flutter_flutter/bin:$PATH"' >> ~/.zshrc
+source ~/.zshrc
+flutter --version
 ```
 
 验证：
@@ -128,7 +95,7 @@ source ~/.bash_profile   # 若用 bash
 ```bash
 flutter --version
 ```
-
+![flutter doctor 结果示意](images/flutterversion.png)
 ---
 
 ## 四、运行 Flutter Doctor
@@ -141,19 +108,12 @@ flutter doctor
 
 **结果长什么样**：通过项会显示 ✅，有问题会显示 ❌ 或 ⚠️ 并提示怎么修（例如运行 `flutter doctor --android-licenses`）。
 
-![flutter doctor 结果示意](images/doctor-result.png)
+![flutter doctor 结果示意](images/fluttersuccess.png)
 
-*图 4：理想情况是需要的项都是 ✅；若有 ❌，按终端里的提示逐项处理。*
+*图 4：只要Xcode 部分显示 ✅就表示flutterr安装成功,其他的若有 ❌，先不管。*
 
-该命令会检查本机环境并给出修复建议，例如：
+## 如果是官方版本的 Flutter 此时已经可以创建应用了、但是该版本安装的是鸿蒙版本,需要安装必要的鸿蒙的开发环境
 
-- ✅ Flutter 已安装
-- ✅ /  ❌ Xcode 与 iOS 开发工具
-- ✅ /  ❌ Android Studio 与 Android 工具（若需开发 Android）
-- ✅ /  ❌ VS Code 或 Android Studio 插件
-- ✅ /  ❌ 已连接设备或模拟器
-
-根据提示安装缺失项或执行建议命令（如 `flutter doctor --android-licenses`）。
 
 ---
 
