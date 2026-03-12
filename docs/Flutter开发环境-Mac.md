@@ -15,8 +15,8 @@
 | [二、iOS 环境（Xcode + CocoaPods）](#二ios-环境xcode--cocoapods) | 安装 Xcode（上架需 ≥16）、命令行工具、CocoaPods |
 | [三、Flutter SDK（官方版）](#三flutter-sdk官方版) | 下载/克隆、配置 PATH、验证 |
 | [四、运行 Flutter Doctor](#四运行-flutter-doctor) | 环境自检与修复建议 |
-| [五、Android 环境（可选）](#五android-环境可选) | JDK 17、Android Studio、SDK、许可 |
-| [六、鸿蒙（OpenHarmony）环境](#六鸿蒙openharmony环境) | 鸿蒙版 Flutter（AtomGit）、DevEco、构建 HAP |
+| [五、鸿蒙（OpenHarmony）环境](#六鸿蒙openharmony环境) | 鸿蒙版 Flutter（AtomGit）、DevEco、构建 HAP |
+| [六、Android 环境（可选）](#五android-环境可选) | JDK 17、Android Studio、SDK、许可 |
 | [七、IDE 配置](#七ide-配置) | VS Code / Android Studio 与 Flutter 插件 |
 | [八、常用命令速查](#八常用命令速查) | doctor、run、build、鸿蒙 HAP 等 |
 | [九、自检清单](#九自检清单) | 上架/开发前逐项核对 |
@@ -131,7 +131,7 @@ flutter doctor
 
 下载完成这三项之后,flutter 找不到 HMOS/OpenHarmony SDK，需要你在 macOS 上把 SDK 路径告诉它（环境变量 HOS_SDK_HOME 或 flutter config --ohos-sdk）。
 
-### 6.1 设置path 编辑~/.zshrc
+### 5.1 设置path 编辑~/.zshrc
 
 
 #  ⚠️OpenHarmony/HarmonyOS toolchain (from ~/Documents/command-line-tools)
@@ -144,7 +144,7 @@ alias hvigor="$HOME/Documents/command-line-tools/bin/hvigorw"
 
 ![zshrc 结果示意](images/zshrc.png)
 
-### 6.2 环境检查与构建
+### 5.2 环境检查与构建
 
 ```bash
 flutter doctor -v
