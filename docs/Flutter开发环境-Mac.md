@@ -39,6 +39,7 @@
 ## 二、iOS 环境（Xcode + CocoaPods）
 
 **本节说明**：开发或上架 iOS 应用需要 Xcode 与 CocoaPods；上架 App Store 需 Xcode 16 及以上。
+![xcide 结果示意](images/Xcode.png)
 
 1. 从 **App Store** 安装 **Xcode**。
    - **上架 App Store 要求**：需使用 **Xcode 16 及以上版本**，否则可能无法提交或通过审核。
