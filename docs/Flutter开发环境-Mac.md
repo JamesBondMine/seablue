@@ -43,16 +43,11 @@
 
 1. 从 **App Store** 安装 **Xcode**。
    - **上架 App Store 要求**：需使用 **Xcode 16 及以上版本**，否则可能无法提交或通过审核。
-2. 安装完成后，打开 Xcode 一次，完成许可协议与额外组件安装。
-3. 安装 Xcode 命令行工具（在终端执行）：
-   ```bash
-   sudo xcode-select --switch /Applications/Xcode.app/Contents/Developer
-   sudo xcodebuild -runFirstLaunch
-   ```
-4. 同意 Xcode 许可（如未同意过）：
-   ```bash
-   sudo xcodebuild -license accept
-   ```
+2. 安装完成后，打开 Xcode 一次，完成许可协议与额外组件安装(主要是安装模拟器)。
+3. 启动 Xcode 创建一个app进行测试：
+   ![xcide 创建示意](images/xcode1.png)![xcide 创建示意1](images/xcode2.png)
+4. 运行 Xcode 选择模拟器查看加载效果：
+![xcide 运行示意](images/xcode2.png)
 5. **安装 CocoaPods**（iOS 依赖管理，Flutter 构建 iOS 必需）：
    ```bash
    sudo gem install cocoapods
