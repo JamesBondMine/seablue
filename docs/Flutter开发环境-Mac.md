@@ -49,9 +49,14 @@
    ![xcode 创建示意1](images/xcode2.png)
 4. 运行 Xcode 选择模拟器查看加载效果：
 ![xcide 运行示意](images/xcode3.png)
-5. **安装 CocoaPods**（iOS 依赖管理，Flutter 构建 iOS 必需）：
+5. **安装 CocoaPods**（iOS 依赖管理，Flutter 构建 iOS 必需）：[建议开启VPN,减少失败]
    ```bash
    sudo gem install cocoapods
+   ```
+
+   安装完成后，输入 pod --version 验证是否安装成功。
+   ```bash
+   pod --version
    ```
    若本机无 Ruby 或报错，可先通过 [Homebrew](https://brew.sh/) 安装 Ruby 再执行上述命令。首次在项目 `ios` 目录执行 `pod install` 时，CocoaPods 会下载索引，可能较慢。
 
