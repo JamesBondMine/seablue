@@ -230,7 +230,7 @@ generate signature)
 2、cd ios
 3、flutter run
 
-![ios运行 结果示意](images/runios.png)
+<img src="images/runios.png" alt="ios运行 结果示意" height="668">
 
 🍎运行到手机或者额打包需要配置开发者证书配置Xcode🍎
 
