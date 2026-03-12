@@ -18,7 +18,7 @@
 | [五、鸿蒙（OpenHarmony）环境](#六鸿蒙openharmony环境) | 鸿蒙版 Flutter（AtomGit）、DevEco、构建 HAP |
 | [六、Android 环境（可选）](#五android-环境可选) | JDK 17、Android Studio、SDK、许可 |
 | [七、IDE 配置](#七ide-配置) | VS Code / Android Studio 与 Flutter 插件 |
-| [八、常用命令速查](#八常用命令速查) | doctor、run、build、鸿蒙 HAP 等 |
+| [八、常用命令&项目运行](#八常用命令速查) | doctor、run、build、鸿蒙 HAP 等 |
 | [九、自检清单](#九自检清单) | 上架/开发前逐项核对 |
 | [十、常见问题](#十常见问题) | 报错与排查 |
 
@@ -201,7 +201,6 @@ flutter create appbyflutter
 | 命令 | 说明 |
 |------|------|
 | `flutter doctor` | 检查开发环境 |
-| `flutter doctor -v` | 详细检查结果 |
 | `flutter create 项目名` | 创建新项目 |
 | `flutter pub get` | 安装依赖 |
 | `flutter run` | 运行当前项目（需连接设备或启动模拟器） |
@@ -217,6 +216,24 @@ flutter create appbyflutter
 | `flutter create --platforms ohos 项目名` | 创建带鸿蒙平台的项目（需鸿蒙版 Flutter） |
 | `flutter build hap --target-platform ohos-arm64 --debug` | 构建鸿蒙 debug HAP |
 | `flutter build hap --target-platform ohos-arm64 --release` | 构建鸿蒙 release HAP（发布用） |
+
+**8.1**：iOS运行与打包
+1、flutter pub get
+2、cd ios
+3、flutter run
+
+![ios运行 结果示意](images/runios.png)
+
+🍎运行到手机或者额打包需要配置开发者证书配置Xcode🍎
+
+**8.2**：android运行与打包
+1、flutter run
+2、flutter build apk
+
+
+**8.3**：鸿蒙运行与打包
+1、flutter run
+2、flutter build apk
 
 ---
 
