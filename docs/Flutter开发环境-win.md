@@ -1,4 +1,4 @@
-# Flutter 开发环境搭建指南（Windows）
+# Flutter 开发环境搭建指南（Mac）
 
 以 Mac 为例，从零搭建 Flutter 开发环境的完整步骤。
 
