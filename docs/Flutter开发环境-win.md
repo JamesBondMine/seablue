@@ -208,6 +208,8 @@ flutter create appbyflutter
 2. `flutter run`（选择 Android 设备/模拟器）
 3. `flutter build apk`（打包 APK）
 
+(建议安卓使用官方的flutter打包)
+
 **7.2**：鸿蒙运行与打包
 1. `flutter run`
 
