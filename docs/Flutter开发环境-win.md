@@ -272,3 +272,9 @@ flutter create appbyflutter
 ---
 
 按上述步骤在 Windows 上完成配置后，即可使用 `flutter create`、`flutter run` 和 IDE 进行 Flutter 开发。本仓库为 Flutter 项目（含鸿蒙 ohos 平台），在环境就绪后可直接在项目根目录执行 `flutter pub get` 与 `flutter run` 运行应用；鸿蒙端使用 `flutter build hap` 构建。
+
+---
+
+🔗 **查看 macOS 版本指南**：
+[Flutter 开发环境搭建指南（mac）](https://github.com/JamesBondMine/seablue/blob/main/docs/Flutter开发环境-Mac.md)
+

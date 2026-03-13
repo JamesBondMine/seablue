@@ -4,6 +4,12 @@
 
 **整体流程**（按顺序做，不容易乱）：
 
+---
+
+🔗 **Windows 版本**：
+[Flutter 开发环境搭建指南（Windows）](https://github.com/JamesBondMine/seablue/blob/main/docs/Flutter开发环境-win.md)
+
+
 
 ---
 
@@ -198,6 +204,7 @@ generate signature)
 ![code 结果示意](images/vscode.png)
 1. 安装 [VS Code](https://code.visualstudio.com/)。
 2. 安装扩展：
+
    - **Flutter**（会连带安装 Dart 扩展）。
 3. 命令面板（`Cmd+Shift+P`）输入 `Flutter: New Project` 可创建新项目；底部状态栏可选择设备并运行/调试。
 
