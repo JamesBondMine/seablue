@@ -227,17 +227,21 @@ generate signature)
 **7.2**：鸿蒙运行与打包
 1. `flutter run`
 
-❗︎❗︎❗︎首次运行异常❗︎❗︎❗︎
-![hap 结果示意](images_win/haprun.png)
+    ❗︎❗︎❗︎首次运行异常❗︎❗︎❗︎
 
-打开DevEco 处理
-![hap 结果示意](images_win/haprun.png)
+    ![hap 结果示意](images_win/haprun.png)
 
-再次通过命令运行
-<img src="images_win/runios.png" alt="ios运行 结果示意" height="668">
+    打开DevEco  根据提示处理签名问题
+
+    ![hap 结果示意](images_win/haprun1.png)
+
+    处理完成后,再次通过命令运行
+
+    <img src="images_win/runios.png" alt="ios运行 结果示意" height="668">
 
 2. 打包（推荐通过鸿蒙开发者工具Build打包）
-![hap 结果示意](images_win/hap.png)
+
+    ![hap 结果示意](images_win/hap.png)
 ---
 
 ## 八、自检清单
