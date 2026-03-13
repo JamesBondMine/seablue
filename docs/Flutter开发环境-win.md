@@ -150,12 +150,12 @@ flutter create --platforms android,ohos appbyflutter
 ```
 ![创建结果 结果示意](images_win/create.png)
 
-创建支持鸿蒙的工程：
+创建(不区分平台的)工程：
 
 ```powershell
 flutter create appbyflutter
 ```
-
+会创建全部平台的工程
 
 ### 4.3 配置调试签名
 
@@ -166,7 +166,6 @@ generate signature)
 
 ---
 ## 五、Android 环境（可选）
-![zshrc 结果示意](images_win/androids.png)
 **本节说明**：仅在需要开发 Android 应用时配置；需 JDK 17 与 Android Studio。
 
 在 Windows 上开发 Android 时：
@@ -186,7 +185,7 @@ generate signature)
 **本节说明**：选 VS Code 或 Android Studio 其一，安装 Flutter 插件即可编写、运行、调试。
 
 ### 6.1 VS Code（轻量推荐）
-![code 结果示意](images_win/vscode.png)
+
 1. 安装 [VS Code](https://code.visualstudio.com/)。
 2. 安装扩展：
    - **Flutter**（会连带安装 Dart 扩展）。
@@ -220,17 +219,18 @@ generate signature)
 | `flutter build hap --target-platform ohos-arm64 --debug` | 构建鸿蒙 debug HAP |
 | `flutter build hap --target-platform ohos-arm64 --release` | 构建鸿蒙 release HAP（发布用） |
 
+
 **7.1**：Android 运行与打包
 1. `flutter pub get`（可选，首次或依赖变更时）
 2. `flutter run`（选择 Android 设备/模拟器）
 3. `flutter build apk`（打包 APK）
 
-![android打包 结果示意](images_win/apk.png)
-
 **7.2**：鸿蒙运行与打包
 1、flutter run
 2、flutter build hap(推荐通过鸿蒙开发者工具Build打包)
-![hap打包 结果示意](images_win/hap.png)
+
+<img src="images/runios.png" alt="ios运行 结果示意" height="668">
+
 ---
 
 ## 八、自检清单
