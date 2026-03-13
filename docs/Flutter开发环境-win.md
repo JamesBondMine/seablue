@@ -226,10 +226,12 @@ generate signature)
 
 **7.2**：鸿蒙运行与打包
 1. `flutter run`
-2. `flutter build hap`（推荐通过鸿蒙开发者工具Build打包）
+
 
 <img src="images_win/runios.png" alt="ios运行 结果示意" height="668">
 
+2. （推荐通过鸿蒙开发者工具Build打包）
+![hap 结果示意](images_win/hap.png)
 ---
 
 ## 八、自检清单
