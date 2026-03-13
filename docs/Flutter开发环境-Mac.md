@@ -1,4 +1,4 @@
-# Flutter 开发环境搭建指南（Windows）
+# Flutter 开发环境搭建指南（mac）
 
 以 Mac 为例，从零搭建 Flutter 开发环境的完整步骤。
 
@@ -13,10 +13,10 @@
 |------|----------|
 | [一、系统要求](#一系统要求) | macOS 版本、磁盘、基础工具 |
 | [二、iOS 环境（Xcode + CocoaPods）](#二ios-环境xcode--cocoapods) | 安装 Xcode（上架需 ≥16）、命令行工具、CocoaPods |
-| [三、Flutter SDK（官方版）](#三flutter-sdk官方版) | 下载/克隆、配置 PATH、验证 |
+| [三、Flutter SDK（鸿蒙版）](#三flutter-sdk鸿蒙版) | 下载/克隆、配置 PATH、验证 |
 | [四、运行 Flutter Doctor](#四运行-flutter-doctor) | 环境自检与修复建议 |
-| [五、鸿蒙（OpenHarmony）环境](#六鸿蒙openharmony环境) | 鸿蒙版 Flutter（AtomGit）、DevEco、构建 HAP |
-| [六、Android 环境（可选）](#五android-环境可选) | JDK 17、Android Studio、SDK、许可 |
+| [五、鸿蒙（OpenHarmony）环境](#五鸿蒙openharmony环境) | 鸿蒙版 Flutter（AtomGit）、DevEco、构建 HAP |
+| [六、Android 环境（可选）](#六android-环境可选) | JDK 17、Android Studio、SDK、许可 |
 | [七、IDE 配置](#七ide-配置) | VS Code / Android Studio 与 Flutter 插件 |
 | [八、常用命令&项目运行](#八常用命令速查) | doctor、run、build、鸿蒙 HAP 等 |
 | [九、自检清单](#九自检清单) | 上架/开发前逐项核对 |
