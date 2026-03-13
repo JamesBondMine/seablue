@@ -115,12 +115,11 @@ flutter doctor
 
 注意区分芯片类型
 
-1、DevEco Studio
-![eco 结果示意](images_win/eco.png)
-2、Command Line Tools
-![sdk 结果示意](images_win/sdk.png)
-3、ohpm-repo
-![ohpm 结果示意](images_win/ohpm.png)
+| 序号 | 工具 | 示意图 |
+|------|------|--------|
+| 1 | DevEco Studio | ![eco 结果示意](images_win/eco.png) |
+| 2 | Command Line Tools | ![sdk 结果示意](images_win/sdk.png) |
+| 3 | ohpm-repo | ![ohpm 结果示意](images_win/ohpm.png) |
 
 下载完成这三项之后，Flutter 找不到 HMOS/OpenHarmony SDK，需在 Windows 上把 SDK 路径告诉它（环境变量 `HOS_SDK_HOME` 或 `flutter config --ohos-sdk`）。
 
@@ -229,7 +228,7 @@ generate signature)
 1、flutter run
 2、flutter build hap(推荐通过鸿蒙开发者工具Build打包)
 
-<img src="images/runios.png" alt="ios运行 结果示意" height="668">
+<img src="images_win/runios.png" alt="ios运行 结果示意" height="668">
 
 ---
 
