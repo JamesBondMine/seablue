@@ -225,8 +225,8 @@ generate signature)
 3. `flutter build apk`（打包 APK）
 
 **7.2**：鸿蒙运行与打包
-1、flutter run
-2、flutter build hap(推荐通过鸿蒙开发者工具Build打包)
+1. `flutter run`
+2. `flutter build hap`（推荐通过鸿蒙开发者工具Build打包）
 
 <img src="images_win/runios.png" alt="ios运行 结果示意" height="668">
 
