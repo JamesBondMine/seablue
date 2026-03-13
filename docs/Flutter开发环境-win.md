@@ -50,27 +50,30 @@
 在 **PowerShell** 或 **CMD** 中执行（将 `C:\src` 换成你希望放置的目录）：
 
 ```powershell
-cd %USERPROFILE%
 git clone https://gitcode.com/openharmony-tpc/flutter_flutter.git
 ```
+### 方式一：直接下载zip然后解压
 
-若克隆到 `C:\Users\你的用户名\flutter_flutter`，则下面 PATH 中请使用该路径。
+下载地址:
+https://atomgit.com/openharmony-tpc/flutter_flutter/tree/oh-3.35.7-dev
 
 ### 配置环境变量 PATH（Windows）
 
-![PATH 配置示意](images_win/path-config.png)
 
-**方法 A：图形界面**
+**方法：图形界面**
 
 1. 右键 **此电脑** → **属性** → **高级系统设置** → **环境变量**。
-2. 在 **用户变量** 中选中 **Path** → **编辑** → **新建**，添加：`%USERPROFILE%\flutter_flutter\bin`（若克隆到其他目录则填该目录下的 `bin` 路径）。
+2. 在 **用户变量** 中选中 **Path** → **编辑** → **新建**，
+![flutter doctor 结果示意](images_win/path.png)
+
+添加：
+
+`%USERPROFILE%\flutter_flutter\bin`（若克隆到其他目录则填该目录下的 `bin` 路径）。
+
+添加结果：
+![flutter doctor 结果示意](images_win/zshrc.png)
+
 3. 确定保存后，**重新打开** PowerShell 或 CMD。
-
-**方法 B：命令行（需管理员权限或当前用户 Path 可写）**
-
-```powershell
-setx PATH "%USERPROFILE%\flutter_flutter\bin;%PATH%"
-```
 
 然后**新开一个终端**再执行：
 
