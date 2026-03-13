@@ -67,12 +67,9 @@ https://atomgit.com/openharmony-tpc/flutter_flutter/tree/oh-3.35.7-dev
 
 ![flutter doctor 结果示意](images_win/path.png)
 
-添加：
-
-`%USERPROFILE%\flutter_flutter\bin`（若克隆到其他目录则填该目录下的 `bin` 路径）。
+添加： `bin` 路径。
 
 添加结果：
-
 
 ![flutter doctor 结果示意](images_win/pathflutter.png)
 
@@ -171,9 +168,13 @@ flutter create appbyflutter
 1. 安装 [VS Code](https://code.visualstudio.com/)。
 2. 安装扩展：
    - **Flutter**（会连带安装 Dart 扩展）。
-3. 命令面板（**Ctrl+Shift+P**）输入 `Flutter: New Project` 可创建新项目；底部状态栏可选择设备并运行/调试。
+
 
 ![codef 结果示意](images_win/codeflutter.png)
+
+3. 选择设备并运行/调试。
+
+![codef 结果示意](images_win/codeflutter1.png)
 
 ### 6.2 Android Studio
 1. **File → Settings**（或 **Ctrl+Alt+S**）→ **Plugins** → 搜索并安装 **Flutter**（会提示安装 Dart 插件）。
