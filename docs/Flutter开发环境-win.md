@@ -13,8 +13,8 @@
 |------|----------|
 | [一、系统要求](#一系统要求) | Windows 版本、磁盘、基础工具 |
 | [二、Flutter SDK（鸿蒙版）](#二flutter-sdk鸿蒙版) | 下载/克隆、配置 PATH、验证 |
-| [三、运行 Flutter Doctor](#三运行-flutter-doctor) | 环境自检与修复建议 |
-| [四、鸿蒙（OpenHarmony）环境](#四鸿蒙openharmony环境) | 鸿蒙版 Flutter（AtomGit）、DevEco、构建 HAP |
+| [三、鸿蒙（OpenHarmony）环境](#四鸿蒙openharmony环境) | 鸿蒙版 Flutter（AtomGit）、DevEco、构建 HAP |
+| [四、运行 Flutter Doctor](#三运行-flutter-doctor) | 环境自检与修复建议 |
 | [五、Android 环境（可选）](#五android-环境可选) | JDK 17、Android Studio、SDK、许可 |
 | [六、IDE 配置](#六ide-配置) | VS Code / Android Studio 与 Flutter 插件 |
 | [七、常用命令&项目运行](#七常用命令速查) | doctor、run、build、鸿蒙 HAP 等 |
@@ -90,25 +90,7 @@ flutter --version
 
 ---
 
-## 三、运行 Flutter Doctor
-
-**本节说明**：用一条命令检查环境是否就绪，并按提示补全缺失项。
-
-```powershell
-flutter doctor
-```
-
-**结果长什么样**：通过项会显示 ✅，有问题会显示 ❌ 或 ⚠️ 并提示怎么修（例如运行 `flutter doctor --android-licenses`）。
-
-![flutter doctor 结果示意](images_win/fluttersuccess.png)
-
-*图：Android / Flutter 等项显示 ✅ 即表示 Flutter 安装成功；若有 ❌ 可按提示逐项修复。*
-
-本版本为鸿蒙版 Flutter，需继续配置鸿蒙开发环境后才能构建 HAP，见下一节。
-
----
-
-## 四、鸿蒙（OpenHarmony）环境
+## 三、鸿蒙（OpenHarmony）环境
 
 **下载**： 鸿蒙 SDK 与工具链
 前往浏览器下载(https://developer.huawei.com/consumer/cn/deveco-studio/)
@@ -123,7 +105,7 @@ flutter doctor
 
 下载完成这三项之后，Flutter 找不到 HMOS/OpenHarmony SDK，需在 Windows 上把 SDK 路径告诉它（环境变量 `HOS_SDK_HOME` 或 `flutter config --ohos-sdk`）。
 
-### 4.1 设置环境变量（Windows）
+### 3.1 设置环境变量（Windows）
 
 将 **Command Line Tools** 解压到某目录（例如 `D:\huawei\command-line-tools`），然后添加系统/用户环境变量：
 
@@ -132,7 +114,7 @@ flutter doctor
 ![环境变量 结果示意](images_win/zshrc.png)
 
 
-### 4.2 环境检查与构建
+### 3.2 环境检查与构建
 
 在**新开的** PowerShell 或 CMD 中执行：
 
@@ -156,7 +138,7 @@ flutter create appbyflutter
 ```
 会创建全部平台的工程
 
-### 4.3 配置调试签名
+### 3.3 配置调试签名
 
 1、启动DevEco
 2、打开appbyflutter中的ohos项目
@@ -164,6 +146,25 @@ flutter create appbyflutter
 generate signature)
 
 ---
+
+## 四、运行 Flutter Doctor
+
+**本节说明**：用一条命令检查环境是否就绪，并按提示补全缺失项。
+
+```powershell
+flutter doctor
+```
+
+**结果长什么样**：通过项会显示 ✅，有问题会显示 ❌ 或 ⚠️ 并提示怎么修（例如运行 `flutter doctor --android-licenses`）。
+
+![flutter doctor 结果示意](images_win/fluttersuccess.png)
+
+*图：Android / Flutter 等项显示 ✅ 即表示 Flutter 安装成功；若有 ❌ 可按提示逐项修复。*
+
+本版本为鸿蒙版 Flutter，需继续配置鸿蒙开发环境后才能构建 HAP，见下一节。
+
+---
+
 ## 五、Android 环境（可选）
 **本节说明**：仅在需要开发 Android 应用时配置；需 JDK 17 与 Android Studio。
 
