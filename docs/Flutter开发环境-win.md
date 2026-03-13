@@ -114,7 +114,24 @@ flutter --version
 ![环境变量 结果示意](images_win/zshrc.png)
 
 
-### 3.2 环境检查与构建
+---
+
+## 四、运行 Flutter Doctor
+
+**本节说明**：用一条命令检查环境是否就绪，并按提示补全缺失项。
+
+```powershell
+flutter doctor
+```
+
+**结果长什么样**：通过项会显示 ✅，有问题会显示 ❌ 或 ⚠️ 并提示怎么修（例如运行 `flutter doctor --android-licenses`）。
+
+![flutter doctor 结果示意](images_win/fluttersuccess.png)
+
+*图：Android / Flutter 等项显示 ✅ 即表示 Flutter 安装成功；若有 ❌ 可按提示逐项修复。*
+
+
+### 4.1 环境检查与构建
 
 在**新开的** PowerShell 或 CMD 中执行：
 
@@ -138,30 +155,6 @@ flutter create appbyflutter
 ```
 会创建全部平台的工程
 
-### 3.3 配置调试签名
-
-1、启动DevEco
-2、打开appbyflutter中的ohos项目
-3、请通过DevEco Studio打开ohos工程后配置调试签名(File -> Project Structure -> Signing Configs 勾选Automatically
-generate signature)
-
----
-
-## 四、运行 Flutter Doctor
-
-**本节说明**：用一条命令检查环境是否就绪，并按提示补全缺失项。
-
-```powershell
-flutter doctor
-```
-
-**结果长什么样**：通过项会显示 ✅，有问题会显示 ❌ 或 ⚠️ 并提示怎么修（例如运行 `flutter doctor --android-licenses`）。
-
-![flutter doctor 结果示意](images_win/fluttersuccess.png)
-
-*图：Android / Flutter 等项显示 ✅ 即表示 Flutter 安装成功；若有 ❌ 可按提示逐项修复。*
-
-本版本为鸿蒙版 Flutter，需继续配置鸿蒙开发环境后才能构建 HAP，见下一节。
 
 ---
 
