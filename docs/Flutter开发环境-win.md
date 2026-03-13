@@ -266,7 +266,7 @@ flutter create appbyflutter
 
 ### 9.4 鸿蒙开发：Flutter 从哪里获取？doctor 不识别 OpenHarmony？
 
-- 鸿蒙需使用 **AtomGit** 上的 Flutter 仓库，分支 **`oh-3.35.7-dev`**，见 [四、鸿蒙（OpenHarmony）环境](#四鸿蒙openharmony环境)。不要使用官网或 GitHub 的 Flutter 做鸿蒙构建。
+- 鸿蒙需使用 **AtomGit** 上的 Flutter 仓库，分支 **`oh-3.35.7-dev`**，见 [四、鸿蒙（OpenHarmony）环境](#三鸿蒙openharmony环境)。不要使用官网或 GitHub 的 Flutter 做鸿蒙构建。
 - 确保 `PATH` 中优先使用鸿蒙版 Flutter 的 `bin` 目录，并配置好 `HOS_SDK_HOME`、`COMMAND_LINE_TOOLS_HOME`、`ohpm`、`hvigor` 等环境变量后，再运行 `flutter doctor -v` 查看 OpenHarmony 是否识别。
 
 ---
