@@ -64,6 +64,7 @@ https://atomgit.com/openharmony-tpc/flutter_flutter/tree/oh-3.35.7-dev
 
 1. 右键 **此电脑** → **属性** → **高级系统设置** → **环境变量**。
 2. 在 **用户变量** 中选中 **Path** → **编辑** → **新建**，
+
 ![flutter doctor 结果示意](images_win/path.png)
 
 添加：
@@ -71,6 +72,8 @@ https://atomgit.com/openharmony-tpc/flutter_flutter/tree/oh-3.35.7-dev
 `%USERPROFILE%\flutter_flutter\bin`（若克隆到其他目录则填该目录下的 `bin` 路径）。
 
 添加结果：
+
+
 ![flutter doctor 结果示意](images_win/zshrc.png)
 
 3. 确定保存后，**重新打开** PowerShell 或 CMD。
@@ -83,10 +86,8 @@ flutter --version
 
 验证：
 
-```powershell
-flutter --version
-```
 ![flutter doctor 结果示意](images_win/flutterversion.png)
+
 ---
 
 ## 三、运行 Flutter Doctor
